@@ -1,0 +1,39 @@
+body{font-family: 'verdana', sans-serif;}
+*{padding: 0;margin: 0;}
+nav{width: 300px;float: left;overflow: hidden;}
+.test1,.assign1{background: rgba(0, 0, 0, 0.7); overflow: hidden;margin: 0 auto;}
+.tabcontent1{display: block;}
+.tabcontent{display: none;}
+.maintabs{overflow: hidden;height: 450px;position: fixed;top: 50%; left: 0;margin: -225px 0 0 0;}
+.maintabs li{height: 50px;background: rgba(0, 0, 0, 0.7);overflow: hidden;width: 300px;position: relative;}
+.maintabs li:hover{background: rgba(0,0,0,0.8);}
+.maintabs li:after{position: absolute;bottom: 0;left: 10px;right: 10px; content: "";background: rgba(255,255,255,0.5);height: 1px;display: block;}
+.maintabs li a{color: #fff;font-size: 16px;line-height: 50px;height: 50px;display: block; text-transform: capitalize;text-decoration: none;padding-left: 10px;}
+
+.assntabs{width: calc(100% - 350px);overflow: hidden;float: right;}
+
+h3{color: #fff;text-align: center;height: 100px;line-height: 100px;}
+.wrapper{max-width: 1100px;margin: 0 auto;}
+.tabs{text-align: center;margin:0 0 20px 0;}
+.tabs .btn{display:block;overflow: hidden;width: 100px;height: 50px;line-height: 50px;text-decoration: none;text-align: center;margin-bottom: 30px;border-radius: 5px;position: relative;display: inline-block; margin:0 0 0 10px;}
+.tabs .btn:first-child{margin: 0;}
+.btn:after { content: ""; background: #fff; display: block; position: absolute; padding-top: 300%; padding-left: 350%; margin-left: -20px!important; margin-top: -120%; opacity: 0; transition: all 0.65s }
+.btn:active:after {padding: 0;margin: 0;opacity: 1;transition: 0s;}
+.tabs .btn1{background: #000;color: #fff;}
+.tabs .btn2{background: #99ccff;color: #000;}
+.tabs .btn3{background: #f9d77e;color: #000;}
+.tabs .btn4{background: #ffdad4;color: #000;}
+.tab-det{width: 300px;display: none;margin: 0 auto 20px auto;overflow: hidden;padding: 20px;background: #fff;border-radius: 40px;}
+.tab-det img{width: 100%;height: auto;display: block;}
+#tab1{display: block;}
+.animated {-webkit-animation-duration: 0.65s;animation-duration: 0.65s; -webkit-animation-fill-mode: both;animation-fill-mode: both;}
+.fadeIn {-webkit-animation-name: fadeIn;animation-name: fadeIn;}
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.que{border: 1px solid #000; padding: 10px;margin: 10px;background: #fff;}
+.que h4{font-weight: normal;font-size: 16px;margin-bottom: 5px;}
+.que p, #ansdiv{color: #0084b4;font-size: 14px;font-style: italic;}
+#clickme{cursor: pointer;padding: 5px;color: #fff; background-color: #5cb85c; border: 1px solid #4cae4c;border-radius: 5px;text-align: center;display: inline-block;}

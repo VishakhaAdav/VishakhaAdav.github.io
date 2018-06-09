@@ -1,82 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Test</title>
-	<style type="text/css">
-		body{font-family: sans-serif;}
-		*{padding: 0;margin: 0;}
-		h1{color: #000;text-align: center;height: 100px;line-height: 100px;}
-		.wrapper{max-width: 1100px;margin: 0 auto;}
-		.tabs,.tab-img{width: 48%;float: left;}
-		.tabs .btn{display:block;overflow: hidden;width: 100px;height: 50px;line-height: 50px;text-decoration: none;text-align: center;margin-bottom: 30px;border-radius: 5px;position: relative;}
-		.btn:after { content: ""; background: #fff; display: block; position: absolute; padding-top: 300%; padding-left: 350%; margin-left: -20px!important; margin-top: -120%; opacity: 0; transition: all 0.65s }
-		.btn:active:after {padding: 0;margin: 0;opacity: 1;transition: 0s;}
-		.tabs .btn1{background: #000;color: #fff;}
-		.tabs .btn2{background: #99ccff;color: #000;}
-		.tabs .btn3{background: #f9d77e;color: #000;}
-		.tabs .btn4{background: #ffdad4;color: #000;}
-		.tab-det{width: 300px;display: none;}
-		.tab-det img{width: 100%;height: auto;display: block;}
-		#tab1{display: block;}
-		.animated {-webkit-animation-duration: 0.65s;animation-duration: 0.65s; -webkit-animation-fill-mode: both;animation-fill-mode: both;}
-		@keyframes fadeIn {
-		   0% {opacity: 0;}
-		   100% {opacity: 1;} 
-		}
-		.fadeIn {
-            -webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-        }
-	</style>
+	<title>Assignments</title>
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="wrapper">
-	<h1>JavaScript Test</h1>
-	<div class="tabs">
-		<a class="btn btn1" href="javascript:void(0);" onclick="divVisibility('tab1');">Black</a>
-		<a class="btn btn2" href="javascript:void(0);" onclick="divVisibility('tab2');">Blue</a>
-		<a class="btn btn3" href="javascript:void(0);" onclick="divVisibility('tab3');">Gold</a>
-		<a class="btn btn4" href="javascript:void(0);" onclick="divVisibility('tab4');">Rose-Gold</a>
-	</div>
-	<div class="tab-img">
-		<div class="tab-det animated fadeIn" id="tab1">
-			<img src="img/black.jpeg">
+	<nav>
+		<ul class="maintabs">
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab1');" class="tablinks" id="defaultOpen">Test</a></li>
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab2');" class="tablinks">Assignment 1</a></li>
+		</ul>
+	</nav>
+	<div class="assntabs">
+		<div class="test1 tabcontent" id="astab1">
+			<h3>JavaScript Test</h3>
+			<div class="tabs">
+				<a class="btn btn1" href="javascript:void(0);" onclick="divVisibility('tab1');">Black</a>
+				<a class="btn btn2" href="javascript:void(0);" onclick="divVisibility('tab2');">Blue</a>
+				<a class="btn btn3" href="javascript:void(0);" onclick="divVisibility('tab3');">Gold</a>
+				<a class="btn btn4" href="javascript:void(0);" onclick="divVisibility('tab4');">Rose-Gold</a>
+			</div>
+			<div class="tab-img">
+				<div class="tab-det animated fadeIn" id="tab1">
+					<img src="img/black.jpeg">
+				</div>
+				<div class="tab-det animated" id="tab2">
+					<img src="img/blue.jpeg">
+				</div>
+				<div class="tab-det animated" id="tab3">
+					<img src="img/gold.jpeg">
+				</div>
+				<div class="tab-det animated" id="tab4">
+					<img src="img/rose-gold.jpeg">
+				</div>
+			</div>
 		</div>
-		<div class="tab-det animated" id="tab2">
-			<img src="img/blue.jpeg">
-		</div>
-		<div class="tab-det animated" id="tab3">
-			<img src="img/gold.jpeg">
-		</div>
-		<div class="tab-det animated" id="tab4">
-			<img src="img/rose-gold.jpeg">
+		<div class="assign1 tabcontent" id="astab2">
+			<div class="que">
+				<h4>Create a variable called carName, assign the value "Honda City" to it, and display it.</h4>
+				<p id="ans1"></p>
+			</div>
+			<div class="que">
+				<h4>Create a variable called number, assign the value 150 to it, and display it.</h4>
+				<p id="ans2"></p>
+			</div>
+			<div class="que">
+				<h4>Display the sum of 5 + 10, using two variables x and y.</h4>
+				<p id="ans3"></p>
+			</div>
+			<div class="que">
+				<h4>Create a third variable called z, assign x + y to it, and display it.</h4>
+				<p id="ans4"></p>
+			</div>
+			<div class="que">
+				<h4>Use a single var keyword to create three variables with the following values: firstName = "John" lastName = "Doe" age = 35</h4>
+				<p id="ans5"></p>
+			</div>
+			<div class="que">
+				<h4>Create DOB constant. Assume calculateAge() function will give you age. Store the value of calculateAge() in your variable/constant.</h4>
+				<p id="ans5"></p>
+			</div>
+			<div class="que">
+				<h4>Create a variable, assign some value to your variable and insert the value inside "div" element</h4>
+				<div id="ansdiv"></div>
+			</div>
+			<div class="que">
+				<h4>Use above question and use your choice of prompt box to display value of your variable.</h4>
+				<div id="clickme">Click Me</div>
+			</div>
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-var divs = ["tab1", "tab2", "tab3", "tab4"];
-var visibleDivId = null;
-function divVisibility(divId) {
-	if(visibleDivId === divId) {
-		visibleDivId = null;
-	} else {
-		visibleDivId = divId;
-	}
-	hideNonVisibleDivs();
-}
-function hideNonVisibleDivs() {
-	var i, divId, div;
-	for(i = 0; i < divs.length; i++) {
-		divId = divs[i];
-		div = document.getElementById(divId);
-		if(visibleDivId === divId) {
-			div.style.display = "block";
-			div.classList.add("fadeIn");
-		} else {
-			div.style.display = "none";
-		}
-	}
-}
-</script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
