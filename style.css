@@ -35,6 +35,7 @@ h3{color: #fff;text-align: center;height: 100px;line-height: 100px;}
 
 .que{border: 1px solid #000; padding: 10px;margin: 10px;background: #fff;}
 .que h4{font-weight: normal;font-size: 16px;margin-bottom: 5px;}
-.que .txt, #ansdiv{color: #777;font-size: 14px;display: none;margin: 10px auto 0px auto;}
+.que .txt, #ansdiv,#ansdiv2{color: #777;font-size: 14px;margin: 10px auto 0px auto;}
+.que .txt, #ansdiv{display: none;}
 .shwans{cursor: pointer;display: inline-block;color: #22863a;background: #dff0d8;border: 1px solid #ccc;border-radius: 5px;padding: 5px 10px;font-size: 14px;}
 #clickme{cursor: pointer;padding: 5px;color: #fff; background-color: #5cb85c; border: 1px solid #4cae4c;border-radius: 5px;text-align: center;display: inline-block;}

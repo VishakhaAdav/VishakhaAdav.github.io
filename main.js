@@ -67,5 +67,9 @@ document.querySelector("#ans5").innerHTML = firstName + " " + lastName + " " +  
 var vishakha = "Name is Vishakha";
 document.getElementById("ansdiv").innerHTML = vishakha;
 document.querySelector("#clickme").addEventListener("click",function(){
-	alert(vishakha);
+	var person = prompt("Please enter your name");
+    if (person != null) {
+        document.getElementById("ansdiv2").innerHTML =
+        "Hello " + person + "! Wassup dudes &#9786;";
+    }
 });
