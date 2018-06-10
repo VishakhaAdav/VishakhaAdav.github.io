@@ -48,16 +48,6 @@ var z = x + y;
 document.querySelector("#ans4").innerHTML = z;
 var firstName = "John", lastName = "Doe", age = 35;
 document.querySelector("#ans5").innerHTML = firstName + " " + lastName + " " +  "age:" + age;
-var DOB = '19800810';
-var year = Number(DOB.substr(0, 4));
-var month = Number(DOB.substr(4, 2)) - 1;
-var day = Number(DOB.substr(6, 2));
-var today = new Date();
-var age = today.getFullYear() - year;
-if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
-  age--;
-}
-alert(age);
 var vishakha = "Name is Vishakha";
 document.getElementById("ansdiv").innerHTML = vishakha;
 
