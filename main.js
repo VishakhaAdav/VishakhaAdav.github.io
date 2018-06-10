@@ -37,6 +37,22 @@ function hideNonVisibleDivs() {
 	}
 }
 
+var acc = document.getElementsByClassName("shwans");
+var i;
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        this.innerHTML = "Hide Answer";
+        var txt = this.nextElementSibling;
+        if (txt.style.display === "block") {
+            txt.style.display = "none";
+	        this.innerHTML = "Show Answer";
+        } else {
+            txt.style.display = "block";
+        }
+    });
+}
+
 // Assignment 1
 var carName = "Honda City";
 document.getElementById("ans1").innerHTML = carName;
@@ -50,7 +66,6 @@ var firstName = "John", lastName = "Doe", age = 35;
 document.querySelector("#ans5").innerHTML = firstName + " " + lastName + " " +  "age:" + age;
 var vishakha = "Name is Vishakha";
 document.getElementById("ansdiv").innerHTML = vishakha;
-
 document.querySelector("#clickme").addEventListener("click",function(){
 	alert(vishakha);
 });
