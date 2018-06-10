@@ -64,6 +64,12 @@ var z = x + y;
 document.querySelector("#ans4").innerHTML = z;
 var firstName = "John", lastName = "Doe", age = 35;
 document.querySelector("#ans5").innerHTML = firstName + " " + lastName + " " +  "age:" + age;
+const DOB = calculateAge();
+function calculateAge(){
+    age = 25;
+    return age;
+}
+document.querySelector("#ans6").innerHTML = DOB;
 var vishakha = "Name is Vishakha";
 document.getElementById("ansdiv").innerHTML = vishakha;
 document.querySelector("#clickme").addEventListener("click",function(){
