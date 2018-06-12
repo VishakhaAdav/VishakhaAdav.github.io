@@ -79,3 +79,134 @@ document.querySelector("#clickme").addEventListener("click",function(){
         "Hello " + person + "! Wassup dudes &#9786;";
     }
 });
+
+// Assignment 2
+var counter = 0;
+counter++;
+++counter;
+console.log( counter );
+
+var n = 2;
+n *= 3 + 5;
+console.log( n );
+
+var a = 1, b = 1; 
+var c = ++a; 
+var d = b++;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+
+var m = 2;
+var o = 1 + (m *= 2);
+console.log(o);
+
+var num1 = 5;
+var num2 = 10;
+var num3 = 3;
+var num4 = 1;
+var greater;
+var greatest;
+var highest;
+function greatestof4(){
+    if (num1 > num2){
+        greater = num1;
+    }else {
+        greater = num2;
+    }
+
+    if(greater > num3){
+        greatest  = greater;
+    }else{
+        greatest = num3;
+    }
+
+    if(greatest > num4){
+        highest  = greatest;
+    }else{
+        highest = num4;
+    }
+    return highest;
+}
+greattestNumber = greatestof4();
+console.log(greattestNumber);    
+document.querySelector("#ans7").innerHTML = greattestNumber;
+
+
+//  if (a + b < 4) { result = 'Below'; } else { result = 'Over'; }
+
+var a1 = 2;
+var b1 = 3;
+var a2 = 1;
+var b2 = 1;
+function grnum() {
+  return (a1 + b1 < 4 ? "Below" : "Over");
+}
+// console.log(grnum());
+document.querySelector("#ans8").innerHTML = grnum();
+
+document.querySelector("#ans9").addEventListener("click", function(){
+
+var a = +prompt('a?', '');
+switch(a) {
+    case 0:
+        alert( 0 ); 
+        break;
+    case 1:
+        alert( 1 );
+        break;
+    case 2:
+    case 3:
+        alert( '2,3' );
+        break;
+    default:
+        alert("number out of range")
+}
+});
+var teenage = 19;
+var inputage = document.querySelector("#agein");
+document.querySelector("#submit").addEventListener("click", function(){
+    if(isNaN(inputage.value) == false && inputage.value <= teenage ){
+        alert("is a teenager");
+    }
+    else{
+        alert("not a teenager")
+    }
+});
+
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Weekend";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Weekend";
+}
+
+
+var color;
+var time = new Date().getHours();
+if (time < 10) {
+    color = "yellow"
+} else if (time < 20) {
+    color = "blue";
+} else {
+    color = "black";
+}
+document.body.style.backgroundColor = color;

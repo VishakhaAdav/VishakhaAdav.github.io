@@ -9,8 +9,9 @@
 <div class="wrapper">
 	<nav>
 		<ul class="maintabs">
-			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab1');" class="tablinks" id="defaultOpen">Test</a></li>
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab1');" class="tablinks" >Test</a></li>
 			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab2');" class="tablinks">Assignment 1</a></li>
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab3');" class="tablinks" id="defaultOpen">Assignment 2</a></li>
 		</ul>
 	</nav>
 	<div class="assntabs">
@@ -77,6 +78,66 @@
 				<h4>Use above question and use your choice of prompt box to display value of your variable.</h4>
 				<div id="clickme">Click Me</div>
 				<div id="ansdiv2"></div>
+			</div>
+		</div>
+		<div class="assign1 tabcontent" id="astab3">
+			<div class="que">
+				<h4>var counter = 0;  counter++; ++counter; alert( counter );What will alert this and why?</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt">Ans will be 2.<br/>counter++ will give 0 as it will increment the value after execution<br/>
+				++counter will increment by 1 and the output will be 2 as it will increment the value before execution</p>
+			</div>
+			<div class="que">
+				<h4>var n = 2; n *= 3 + 5; alert( n ); What will alert this and why?</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt">Ans will be 16 as it will add 3 + 5 and the it will multiply by 2(value stroed in n)</p>
+			</div>
+			<div class="que">
+				<h4>What are the final values of all variables a, b, c and d after the code below?
+				var a = 1, b = 1; 
+				var c = ++a; 
+				var d = b++;
+				</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt">a = 2 => as it will increment the value and then will execute it<br/>
+				b = 1 => as it will first execute and then it will increment the value<br/>
+				c = 2 => it will store the incremented value of a<br/>
+				d = 1 => it will store the incremented value of b
+				</p>
+			</div>
+			<div class="que">
+				<h4>What are the values of a and x after the code below? var a = 2; var x = 1 + (a *= 2);</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt">the value will be 5 as it will first multiply then add</p>
+			</div>
+			<div class="que">
+				<h4>Find greatest among 4 numbers</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt" id="ans7"></p>
+			</div>
+			<div class="que">
+				<h4>Rewrite this if using the ternary operator '?': if (a + b < 4) { result = 'Below'; } else { result = 'Over'; }</h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt" id="ans8"></p>
+			</div>
+			<div class="que">
+				<h4>Rewrite following to switch var a = +prompt('a?', ''); if (a == 0) { alert( 0 ); } if (a == 1) { alert( 1 ); } if (a == 2 || a == 3) { alert( '2,3' ); }</h4>
+				<div id="ans9" class="clickme">Click Me</div>
+			</div>
+			<div class="que">
+				<h4>Write a condition to check if the given age is of a teenager or no. </h4>
+				<input type="text" id="agein">
+				<input type="submit" value="Submit Age" id="submit">
+			</div>
+			<div class="que">
+				<h4>Print/alert todays Day using switch. Also print a message saying “It is a weekend” if Saturday or Sunday! or be creative </h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt" id="day"></p>
+			</div>
+			<div class="que">
+				<h4>Print/alert todays Day using ifelse. Also print a message saying “It is a weekend” if Saturday or Sunday! or be creative </h4>
+				<p class="shwans">Show Answer</p>
+				<p class="txt" id="day2"></p>
 			</div>
 		</div>
 	</div>
