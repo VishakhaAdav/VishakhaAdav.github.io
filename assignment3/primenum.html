@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JavaScript to print prime numbers!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function primeNum() {
+                var i = 0;
+                var j = 0; 
+                var num = document.getElementById('num').value;
+                for (i = 1; i <= num; i++) {
+                    c = 0;
+                    for (j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            c++;
+                        }
+                    }
+                    if (c == 2) {
+                        document.getElementById("primeres").insertAdjacentHTML('beforeend', i + '<br>');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Prime numbers!</h2>
+        Enter the num:  
+        <input type="number" id="num" min="0" style="width: 100px;" />
+        <input type="submit" value="Prime Numbers" onclick="primeNum()"/>
+        <p id="primeres"></p>
+    </body>
+</html>

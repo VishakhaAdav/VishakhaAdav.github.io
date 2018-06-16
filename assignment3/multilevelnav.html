@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;font-family: verdana}
+		a { color: #000; text-decoration: none; padding-left: 20px;overflow: hidden;} 
+		ul { padding: 0; margin: 0; background: #f1f1f1; float: left; } 
+		li { float: left; display: inline; position: relative; width: 150px; list-style: none; height: 30px;line-height: 30px; } 
+		.menu { position: absolute; left: 0; top: 100%; background: #ccc; display: none; } 
+		.submenu{ position: absolute; top:0px; left:150px; background: #777; display: none; overflow: hidden;}
+		.submenu li a{color: #fff;padding-left: 20px;}
+	</style>
+</head>
+<body>
+	<ul class="nav-menu">	
+		<li id="no" onmouseover="dropDown()" onmouseout="reverseDropDown()">
+			<a href="#" >department</a>
+			<ul class="menu">
+				<li id="no2" ><a href="#" onmouseover="dropDown2()" onmouseout="reverseDropDown2()">Employee</a>
+					<ul class="submenu">
+						<li><a href="">abc</a></li>
+						<li><a href="">xyz</a></li>
+						<li><a href="">mno</a></li>
+					</ul>
+				</li>
+				<li><a href="">CM</a></li>
+				<li><a href="">DM</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		function dropDown() {
+			var submenu = document.getElementById('no').getElementsByClassName('menu')[0];
+			submenu.style.display="block";		    
+		}
+
+		function reverseDropDown(){		    
+			var submenu = document.getElementById('no').getElementsByClassName('menu')[0];
+			submenu.style.display="none";
+		}
+
+		function dropDown2() {
+			var submenu = document.getElementById('no2').getElementsByClassName('submenu')[0];
+			submenu.style.display="block";		    
+		}
+
+		function reverseDropDown2(){		    
+			var submenu = document.getElementById('no2').getElementsByClassName('submenu')[0];
+			submenu.style.display="none";
+		}
+	</script>
+</body>
+</html>

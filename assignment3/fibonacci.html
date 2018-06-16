@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>JavaScript to print prime numbers!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function primeNum() {
+                var fibo = []; // initializing array
+                fibo[0] = 0; // setting first two numbers
+                fibo[1] = 1;
+                var lim = document.getElementById('lim').value; // getting the value from user via input
+                for(var i=2; i<=lim; i++){ // running a for loop to generate the series
+                    fibo[i] = fibo[i-2] + fibo[i-1]; // (fibo[2] = fibo[2-2] + fibo[2-1]) this will give the addition of previous num as a result
+                    // console.log(fibo[i]);
+                    document.getElementById("primeres").insertAdjacentHTML('beforeend', fibo[i] + '<br>'); //printing the numbers
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter the limit:  
+        <input type="number" id="lim" min="0" style="width: 100px;" />
+        <input type="submit" value="Generate Fibonacci" onclick="primeNum()"/>
+        <p id="primeres"></p>
+    </body>
+</html>

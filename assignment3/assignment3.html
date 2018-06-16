@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function checkAge(age) {
+			if (age > 18) {
+				return true;
+			} else {
+				return confirm('Did parents allow you?');
+			}
+		}
+
+		function checkAge(age) {
+			if (age > 18) {
+				return true;
+			}
+			return confirm('Did parents allow you?');
+		}
+	// <p>no difference</p>
+// =========================================================
+		function checkAge(age) {
+			return (age > 18 ? true : "Did parents allow you?");
+		}
+// =========================================================
+		function min2(num1 , num2){
+			return(num1 < num2 ? "num1 is min" : "num2 is min")
+		}
+// =========================================================
+// IIFE
+		var userName = "Vishakha";
+		(function (name) {
+		    function display(name)
+		    {
+		        console.log(name);
+		    }
+		    display(name);
+		})(userName);
+// =========================================================
+		// function declaration
+		function bar() {
+		    return 3;
+		}
+		//anonymous function expression
+		var a = function() {
+		    return 3;
+		}		 
+		//named function expression
+		var a = function example() {
+		    return 3;
+		}
+// =========================================================
+		function mul(a1,b1){
+			console.log(a1 * b1);
+		}
+		mul(2,3)
+
+		function mul1(a1,b1,c1,d1){
+			console.log(a1 * b1 * c1 * d1);
+		}
+		mul1(2,3,4,5)
+// =========================================================
+		var checkAge = function(age) {
+			var minimum = 21;
+			return age >= minimum;
+		};
+// =========================================================
+		var numbers = [1, 2, 3, 4, 5, 6, 7];
+		console.log(Math.max(...numbers))
+		console.log(Math.min(...numbers))
+	</script>
+
+</body>
+</html>
