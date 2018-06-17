@@ -200,13 +200,13 @@ switch (new Date().getDay()) {
 }
 
 
-var color;
-var time = new Date().getHours();
-if (time < 10) {
-    color = "yellow"
-} else if (time < 20) {
-    color = "blue";
-} else {
-    color = "black";
-}
-document.body.style.backgroundColor = color;
+// var color;
+// var time = new Date().getHours();
+// if (time < 10) {
+//     color = "yellow"
+// } else if (time < 20) {
+//     color = "blue";
+// } else {
+//     color = "black";
+// }
+// document.body.style.backgroundColor = color;

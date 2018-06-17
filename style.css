@@ -39,3 +39,5 @@ h3{color: #fff;text-align: center;height: 100px;line-height: 100px;}
 .que .txt, #ansdiv{display: none;}
 .shwans{cursor: pointer;display: inline-block;color: #22863a;background: #dff0d8;border: 1px solid #ccc;border-radius: 5px;padding: 5px 10px;font-size: 14px;}
 #clickme,.clickme{cursor: pointer;padding: 5px;color: #fff; background-color: #5cb85c; border: 1px solid #4cae4c;border-radius: 5px;text-align: center;display: inline-block;}
+#astab4{color: #fff;padding: 20px 30px;word-wrap: break-word;}
+.as3tb a{display: inline-block;background: black;color: #fff;text-decoration: none;padding: 5px 10px;margin: 10px 0;}

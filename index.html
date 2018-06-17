@@ -11,7 +11,8 @@
 		<ul class="maintabs">
 			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab1');" class="tablinks" >Test</a></li>
 			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab2');" class="tablinks">Assignment 1</a></li>
-			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab3');" class="tablinks" id="defaultOpen">Assignment 2</a></li>
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab3');" class="tablinks">Assignment 2</a></li>
+			<li><a href="javascript:void(0)" onclick="toggle_visibility(event,'astab4');" class="tablinks" id="defaultOpen">Assignment 3</a></li>
 		</ul>
 	</nav>
 	<div class="assntabs">
@@ -134,7 +135,89 @@
 				<p class="shwans">Show Answer</p>
 				<p class="txt" id="day"></p>
 			</div>
-			</div>
+		</div>
+		<div class="assign1 tabcontent" id="astab4">
+			<p>
+				function checkAge(age) {
+				if (age > 18) {
+				return true;
+				} else {
+				return confirm('Did parents allow you?');
+				}
+				}
+				<br/>
+				function checkAge(age) {
+				if (age > 18) {
+				return true;
+				}
+				return confirm('Did parents allow you?');
+				}
+				<br/>
+				=========================================================
+				function checkAge(age) {
+				return (age > 18 ? true : "Did parents allow you?");
+				}
+				<br/>
+				=========================================================
+				function min2(num1 , num2){
+				return(num1 < num2 ? "num1 is min" : "num2 is min")
+				}
+				<br/>
+				=========================================================
+				IIFE
+				var userName = "Vishakha";
+				(function (name) {
+				function display(name)
+				{
+				console.log(name);
+				}
+				display(name);
+				})(userName);
+				<br/>
+				=========================================================
+				function declaration
+				function bar() {
+				return 3;
+				}
+				<br/>
+				anonymous function expression
+				var a = function() {
+				return 3;
+				}	
+				<br/>	 
+				named function expression
+				var a = function example() {
+				return 3;
+				}
+				<br/>
+				=========================================================
+				function mul(a1,b1){
+				console.log(a1 * b1);
+				}
+				mul(2,3)
+				<br/>
+				function mul1(a1,b1,c1,d1){
+				console.log(a1 * b1 * c1 * d1);
+				}
+				mul1(2,3,4,5)
+				<br/>
+				=========================================================
+				var checkAge = function(age) {
+				var minimum = 21;
+				return age >= minimum;
+				};
+				<br/>
+				=========================================================
+				var numbers = [1, 2, 3, 4, 5, 6, 7];
+				console.log(Math.max(...numbers))
+				console.log(Math.min(...numbers))
+			</p>
+			<div class="as3tb fibonacci"><a href="assignment3/fibonacci.html">fibonacci</a></div>
+			<div class="as3tb palindrome"><a href="assignment3/palindrome.html">palindrome</a></div>
+			<div class="as3tb multilevelnav"><a href="assignment3/multilevelnav.html">multilevelnav</a></div>
+			<div class="as3tb primenum"><a href="assignment3/primenum.html">primenum</a></div>
+			<div class="as3tb stickyheader"><a href="assignment3/stickyheader.html">stickyheader</a></div>
+			<div class="as3tb object"><a href="assignment3/object.html">object</a></div>
 		</div>
 	</div>
 </div>
