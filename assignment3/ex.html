@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 button.active {
+    background-color: #ccc;
+}
+
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+
+	// var tabtxt = ["TAB 1", "TAB 2", "TAB 3"];
+	// var tabcont = ["CONTENT 1", "CONTENT 2", "CONTENT 3"];
+	var switchTab = {
+		tab1:{
+			tabName: "TAB 1",
+			tabCont: "CONTENT 1"
+		},
+		tab2:{
+			tabName: "TAB 2",
+			tabCont: "CONTENT 2"
+		},
+		tab3:{
+			tabName: "TAB 3",
+			tabCont: "CONTENT 3"
+		}
+	}
+	createTab(switchTab)
+	createCont(switchTab)
+	function createTab(){
+		for(tab in switchTab) {
+			var tabNameObj = switchTab[tab];
+			var btn = document.createElement("Button");
+			var t = document.createTextNode(tabNameObj.tabName);
+			var btnattr = btn.setAttribute("onclick","showtab("+tab+")");
+			var btnattr = btn.setAttribute("class","btn");
+			document.body.appendChild(btn);
+			btn.appendChild(t);
+		}
+	}
+	function createCont(){
+		for(tab in switchTab) {
+			var tabNameObj = switchTab[tab];
+			var divwrap = document.createElement("div");
+			var txtwrap = document.createElement("p");
+			divwrap.setAttribute( "class", "tab-cont" );
+			divwrap.setAttribute("id" ,tab);
+			var txtpara = document.createTextNode(tabNameObj.tabCont);
+			document.body.appendChild(divwrap);
+			divwrap.appendChild(txtwrap);
+			txtwrap.appendChild(txtpara);
+			divwrap.style.display = "none";
+		}
+	}
+	function showtab(tab) {
+		console.log(tab);
+		document.getElementsByClassName("tab-cont").style.display = "block"
+	}
+</script>
+</body>
+</html>
